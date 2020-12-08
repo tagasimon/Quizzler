@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'button.dart';
+import 'quiz.dart';
 
 void main() {
   runApp(MyApp());
@@ -20,48 +22,26 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatelessWidget {
+  List<Widget> myIcons = [
+    Icon(Icons.check, color: Colors.green),
+    Icon(Icons.close, color: Colors.red),
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black,
-      // appBar: AppBar(
-      //   title: Text("Quizzler"),
-      // ),
       body: SafeArea(
-        child: Container(
+        child: Padding(
+          padding: const EdgeInsets.all(20.0),
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
-              Container(
-                margin: EdgeInsets.all(10.0),
-                child: Text(
-                  'You have pushed the button this many times:',
-                  style: TextStyle(color: Colors.white, fontSize: 30.0),
-                ),
+              SizedBox(
+                height: 100.0,
               ),
-              Row(
-                children: [
-                  Expanded(
-                    child: FlatButton(
-                      color: Colors.green,
-                      height: 100.0,
-                      child: Text("TRUE"),
-                      onPressed: () {},
-                    ),
-                  ),
-                  SizedBox(
-                    width: 10.0,
-                  ),
-                  Expanded(
-                    child: FlatButton(
-                      height: 100.0,
-                      color: Colors.red,
-                      child: Text("FALSE"),
-                      onPressed: () {},
-                    ),
-                  ),
-                ],
-              )
+              Quiz(),
+              Button(),
             ],
           ),
         ),
