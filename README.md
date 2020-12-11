@@ -1,4 +1,4 @@
 # quizzler
 
-A simple Flutter Application.
+A Simple Quiz Flutter Application.
 

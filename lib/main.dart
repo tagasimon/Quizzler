@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'button.dart';
 import 'quiz.dart';
 
 void main() {
@@ -32,7 +31,7 @@ class MyHomePage extends StatelessWidget {
       backgroundColor: Colors.black,
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.all(20.0),
+          padding: const EdgeInsets.all(10.0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -41,7 +40,6 @@ class MyHomePage extends StatelessWidget {
                 height: 100.0,
               ),
               Quiz(),
-              Button(),
             ],
           ),
         ),
